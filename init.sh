@@ -2,7 +2,7 @@
 
 #Start tailscaled and connect to tailnet
 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state >> /dev/stdout &
-/usr/bin/tailscale up --accept-routes=true --accept-dns=true --auth-key $TAILSCALE_AUTH_KEY >> /dev/stdout &
+/usr/bin/tailscale up --accept-routes=true --advertise-routes=$TAILSCALE_ROUTES --auth-key $TAILSCALE_AUTH_KEY >> /dev/stdout &
 
 #Check for and or create certs directory
 if [[ ! -d "/root/derper/$TAILSCALE_DERP_HOSTNAME" ]]
