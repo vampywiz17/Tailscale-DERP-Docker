@@ -18,6 +18,7 @@ services:
          - TAILSCALE_DERP_CERTMODE=${TAILSCALE_DERP_CERTMODE}
          - TAILSCALE_AUTH_KEY=${TAILSCALE_AUTH_KEY}
          - DERP_ADDR=${DERP_ADDR}
+         - DERP_STUN=${DERP_STUN}
        ports:
          - 80:80/tcp
          - 443:443/tcp
